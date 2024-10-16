@@ -1,72 +1,187 @@
-/* General styles */
-
-
-
-body, html {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Garamond, serif;
+    color: #333;
     background-color: #ffffff;
+    margin: 90px;
+    margin-bottom : 0px;
 }
 
-.container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Section styles */
-.section {
-    margin: 40px 0;
-    width: 80%;
-    text-align: center;
-}
-
-.top-section, .mainnet-section, .eclipse-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.solana-section, .ethereum-liquidity-section {
+header {
+    background-color: #111;
+    color: white;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0px;
 }
 
-.text-left, .text-right {
-    flex: 1;
+header .logo h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+.bruh {
+    text-align: center;
     padding: 20px;
+    margin: 40px;
 }
 
-h1, h2 {
-    font-size: 36px;
+.bruh .welcome-text h2 {
+    font-size: 96px;
+    margin-top: 10px;
+    color: black;
+    font-weight: 900;
+}
+
+.bruh .welcome-text p {
+    font-size: 26px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.introduction,
+.join-us, .vision, .problem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: left;
+    background-color: white;
+    margin: 20px 0;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.introduction .section-image,
+.join-us .section-image,  
+.vision .section-image, .problem .section-image {
+    width: 250px;
+    height: auto;
+    margin-right: 20px; 
+}
+
+
+
+
+.what-we-do,
+.mission, .solution{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: right;
+    background-color: white;
+    margin: 20px 0;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.what-we-do .section-image,
+.mission .section-image, .solution .section-image{
+    width: 250px;
+    height: auto;
+    margin-right: 20px; 
+}
+
+
+
+
+
+.text-content {
+    display: block; 
+}
+
+.text-content h2 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.text-content p {
+    margin: 10px 0 0 0;
+    font-size: 21px;
+}
+
+
+
+
+
+
+
+hr {
+    border: 1px solid black;
     margin: 20px 0;
 }
 
-p {
-    font-size: 18px;
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Placeholder styles */
-.image-placeholder {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    display: inline-block;
+.footer-links {
+    margin-top: 10px;
 }
 
-.large-image {
-    width: 100%;
-    height: 200px;
-}
-
-.medium-image {
-    width: 50%;
-    height: 150px;
-}
-
-.small-image {
-    width: 100px;
-    height: 100px;
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
 }
