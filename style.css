@@ -3,6 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+.page-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -70px; 
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
 
 body {
     font-family: Garamond, serif;
@@ -12,10 +27,37 @@ body {
     margin-bottom : 0px;
 }
 
+@media (max-width: 700px) {
+    body {
+        font-family: Garamond, serif;
+        color: #333;
+        background-color: #ffffff;
+        margin: 0px;
+        margin-top: 90px;
+        margin-bottom : 0px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    body {
+        font-family: Garamond, serif;
+        color: #333;
+        background-color: #ffffff;
+        margin: 0px;
+        margin-top: 90px;
+        margin-bottom : 0px;
+    }
+    html{
+        width: 100%;
+    }
+  }
+
+
+
 header {
     background-color: #111;
     color: white;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,23 +65,40 @@ header {
 }
 
 header .logo h1 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
+    font-family: 'Garamond', serif;
+    letter-spacing: 2px; /* Add spacing between letters */
+    text-transform: uppercase; /* Make text uppercase for a cleaner look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add shadow for depth */
+    transition: font-size 0.3s ease; /* Smooth transition for responsiveness */
 }
 
 header nav ul {
     list-style-type: none;
     display: flex;
     gap: 20px;
+    margin-bottom: -0px;
 }
 
 header nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: color 0.3s ease, font-size 0.3s ease; /* Smooth transition */
 }
 
 
+.logo-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 10px; /* Adds space between the logo and the text */
+    position: absolute;
+    margin-top: -30px;
+}
 
 
 
@@ -84,10 +143,6 @@ header nav ul li a {
     color: black;
     margin-bottom: 40px;
 }
-
-
-
-
 
 
 
@@ -181,7 +236,115 @@ footer {
 }
 
 .footer-links a {
-    color: white;
+    color: rgb(216, 216, 216);
     text-decoration: none;
     margin: 0 15px;
+    font-size: 22px;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.footer-links a:hover {
+    color: rgb(255, 255, 255); /* Change color to blue on hover */
+    font-weight: 900px;
+}
+
+
+@media (max-width: 700px) {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* Keep the header visible */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide all navigation items except the Whitepaper link */
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header nav ul li {
+        display: none; /* Hide all list items */
+    }
+
+    header nav ul li:nth-child(4) { /* Show the Whitepaper link */
+        display: block;
+    }
+
+    /* Hide the logo */
+    .logo-img {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%; /* Makes the image circular */
+         margin-right: 10px; /* Adds space between the logo and the text */
+         position: absolute;
+         margin-top: 0px;
+         margin-left:-40px;
+    }
+
+    .page-title h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 0px; 
+    }b
+
+    /* Hero section adjustments */
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust padding for sections */
+    .introduction, .join-us, .vision, .problem, .what-we-do, .mission, .solution {
+        flex-direction: column;
+        margin: 20px 10px;
+        padding: 20px;
+        margin-top : 0px;
+        margin-bottom:0px;
+        padding-top : 0px;
+        padding-bottom : 0px;
+    }
+
+    /* Adjust images within sections */
+    .section-image {
+        width: 100%;  /* Make images full-width on small screens */
+        height: auto;
+        margin: 20px 0; /* Add space around images */
+    }
+
+    /* Adjust text-content for smaller screens */
+    .text-content h2 {
+        font-size: 28px; /* Smaller but still readable titles */
+    }
+
+    .text-content p {
+        font-size: 16px; /* Smaller but readable paragraph text */
+    }
+
+    /* Adjust the welcome section */
+    .bruh .welcome-text h2 {
+        font-size: 36px; /* Adjust for mobile */
+    }
+
+    .bruh .welcome-text p {
+        font-size: 18px; /* Adjust paragraph font */
+    }
+
+    .introduction .section-image,
+.join-us .section-image,  
+.vision .section-image, .problem .section-image {
+    display:none;
+}
 }
