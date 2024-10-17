@@ -347,4 +347,36 @@ footer {
 .vision .section-image, .problem .section-image {
     display:none;
 }
+
+
+
+}
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: rgb(216, 216, 216);
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.footer-links a:hover {
+    color: rgb(255, 255, 255); /* Change color to blue on hover */
+    font-weight: 900px;
+}
+
+
+
+
+    
 }
