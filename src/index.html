@@ -58,23 +58,26 @@
       <hr>
   </section>
   <!-- The Thingy -->
-  <div class="container-exhange">
-    <h1>Token Sale</h1>
-    <p id="subtitle-exhange">we're totally not ripping off BCA</p>
-    <button id="connectButton-exhange">Connect Wallet</button>
-    <p id="walletAddress-exhange">Hi, Connect Me First :)</p>
+  <div class="container">
+    <div class="header">
+      <h1>Token Sale</h1>
+      <button id="connectButton">Connect Wallet</button>
+    </div>
+    <p id="walletAddress">Hi, Connect Me First :)</p>
 
-    <h2>Buy Tokens</h2>
-    <label for="buyAmount">Amount to Buy (ETH):</label><br />
-    <input
-      type="number"
-      id="buyAmount"
-      placeholder="0.1"
-      min="0.01"
-      step="0.01"
-    />
-    <br />
-    <button id="buyButton">Buy Tokens</button>
+    <div class="form-group">
+      <div>
+        <label for="buyAmount">Amount to Buy (ETH):</label>
+        <input
+          type="number"
+          id="buyAmount"
+          placeholder="0.1"
+          min="0.01"
+          step="0.01"
+        />
+      </div>
+      <button id="buyButton">Buy Tokens</button>
+    </div>
     <p id="transactionStatus"></p>
   </div>
 

@@ -98,6 +98,7 @@ header nav ul li a {
   margin-right: 10px; /* Adds space between the logo and the text */
   position: absolute;
   margin-top: -30px;
+  z-index: 20;
 }
 
 
@@ -153,8 +154,8 @@ header nav ul li a {
   text-align: left;
   background-color: white;
   margin: 20px 0;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
 .introduction .section-image,
@@ -162,7 +163,6 @@ header nav ul li a {
 .vision .section-image, .problem .section-image {
   width: 250px;
   height: auto;
-  margin-right: 20px; 
 }
 
 
@@ -177,8 +177,8 @@ header nav ul li a {
   text-align: right;
   background-color: white;
   margin: 20px 0;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 20vh;
+  margin-right: 20vh;
 }
 
 .what-we-do .section-image,
@@ -276,6 +276,7 @@ footer {
        position: absolute;
        margin-top: 0px;
        margin-left:-40px;
+       z-index: 8;
   }
 
   .page-title h1{
@@ -284,11 +285,11 @@ footer {
       align-items: center;
       font-size: 40px;
       font-weight: bold;
-      color: #333;
+      color: #333;  
       text-align: center;
       margin-bottom: 10px;
       margin-top: 0px; 
-  }b
+  }
 
   /* Hero section adjustments */
   .hero img {
@@ -366,12 +367,11 @@ footer {
 
 
 :root {
-  --main-color: #1e90ff;
-  --secondary-color: #83bdfc;
+  --main-color: #969696;
+  --secondary-color: #cfcfcf;
 }
 
-
-.container-exhange {
+.container {
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
@@ -380,13 +380,20 @@ footer {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.container-exhange h1 {
+h1 {
   font-size: 2rem;
   color: var(--main-color);
-  text-align: center;
 }
 
-.container-exhange button {
+#subtitle {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: -20px;
+}
+
+button {
   background-color: var(--main-color);
   color: white;
   padding: 10px 20px;
@@ -397,41 +404,44 @@ footer {
   margin-top: 10px;
 }
 
-.container-exhange button:hover {
-  background-color:var(--main-color);
+button:hover {
+  background-color: var(--main-color);
 }
 
-.container-exhange input[type="number"] {
-  width: calc(100% - 20px);
+input[type="number"] {
   padding: 10px;
-  margin: 10px 0;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-label,
-.container-exhange p {
-  font-size: 1rem;
-  margin-bottom: 5px;
-}
-
-#transactionStatus-exhange {
+#transactionStatus {
   margin-top: 15px;
   font-style: italic;
 }
 
-#walletAddress-exhange {
+#walletAddress {
   margin-top: 10px;
   font-weight: bold;
   color: var(--secondary-color);
 }
 
-#subtitle-exhange {
-font-size: 12px;
-font-weight: bold;
-color: var(--secondary-color);
-text-align: center; /* Centers text horizontally */
-margin: 0 auto; /* Centers the element if it has a defined width */
-margin-top: -20px;
+/* Flexbox styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.form-group input {
+  flex: 1;
 }
